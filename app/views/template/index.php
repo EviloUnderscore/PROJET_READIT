@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Template principal</h1>
-    <?php var_dump($connexion);?>
-</body>
+  <head>
+        <!-- HEAD -->
+        <?php include '../app/views/template/partials/_head.php';?>
+  </head>
+  <body>
+        <!-- NAV -->
+        <?php include '../app/views/template/partials/_nav.php';?>
+
+        <!-- HERO -->
+        <?php include '../app/views/template/partials/_hero.php';?>
+
+        <!-- MAIN -->
+        <?php include '../app/views/template/partials/_main.php';?>
+        
+        <!-- FOOTER -->
+        <?php include '../app/views/template/partials/_footer.php';?>
+
+        <!-- LOADER -->
+        <?php include '../app/views/template/partials/_loader.php';?>
+
+        <!-- SCRIPTS -->
+        <?php include '../app/views/template/partials/_scripts.php';?>
+  </body>
 </html>
