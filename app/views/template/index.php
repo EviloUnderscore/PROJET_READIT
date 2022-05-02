@@ -8,7 +8,7 @@
         <!-- NAV -->
         <?php include '../app/views/template/partials/_nav.php';?>
 
-        <!-- HERO -->
+        <!-- HERO  -->
         <?php include '../app/views/template/partials/_hero.php';?>
 
         <!-- MAIN -->
