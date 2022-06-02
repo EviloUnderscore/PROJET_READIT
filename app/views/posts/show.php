@@ -5,6 +5,8 @@ $post : ARRAY(id, title, created_at, resume, image, content, author_id, categori
 */
 ?>
 
+<!-- CONTENT -->
+
     <p class="mb-5">
             <img src="images/<?php echo $post['image'];?>" alt="" class="img-fluid">
     </p>
@@ -13,10 +15,22 @@ $post : ARRAY(id, title, created_at, resume, image, content, author_id, categori
         </div>
     </div>
 
+<!-- TAGS -->
+
 <?php 
 
     include_once '../app/models/tagsModel.php';
     $tags = \App\Models\TagsModel\findAllByPostId($connexion, $post['id']);
     include '../app/views/tags/_indexByPostId.php';
+
+?>
+
+<!-- AUTHORS -->
+
+<?php 
+
+    include_once '../app/models/authorsModel.php';
+    $author = \App\Models\AuthorsModel\findOneById($connexion, $post['author_id']);
+    include '../app/views/authors/_show.php';
 
 ?>
